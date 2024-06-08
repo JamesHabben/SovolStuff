@@ -15,11 +15,13 @@ If you find any issue with timezone names, offsets, values, or something missing
 - **Service Restart**: After updating the timezone configuration file, the Klipper screen service needs to be restarted for changes to take effect. This is done automatically by the python code via a system command that reboots the Klipper screen service.
 
 ## Klipper Screen Images
+
 ### Before Modification
-![IMG_5109](https://github.com/JamesHabben/SovolStuff/assets/6327329/d35fc35b-bec7-46d4-824c-53a81957ac77)
+<img src="https://github.com/JamesHabben/SovolStuff/assets/6327329/d35fc35b-bec7-46d4-824c-53a81957ac77" alt="IMG_5109" width="300"/>
 
 ### After Modification
-![IMG_5112](https://github.com/JamesHabben/SovolStuff/assets/6327329/67b82820-8919-44f6-b7c6-90ccb73fd9ef)
+<img src="https://github.com/JamesHabben/SovolStuff/assets/6327329/67b82820-8919-44f6-b7c6-90ccb73fd9ef" alt="IMG_5112" width="300"/>
+
 
 ## Prerequisites
 - SSH access to the Sovol SV06+ Klipper.
