@@ -32,6 +32,8 @@ If you find any issue with timezone names, offsets, values, or something missing
      ```
      Compare with my backup file hash: `ebf114783ca478465619a67b7d93b8ad03dd192311629606aaa0400b158b4ee0`
 
+     If your hash is different, there might be different python code than the version I built this from, so open an issue here to let me know and we can explore options.
+
 4. **Rename the existing `zone.py` to `zone.py.bak`**
    - It's important to keep a backup of the original configuration:
      ```bash
