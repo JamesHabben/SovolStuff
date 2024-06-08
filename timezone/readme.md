@@ -6,6 +6,14 @@ This will probably work on other Sovol models as well, but I only have an SV06+ 
 
 If you find any issue with timezone names, offsets, values, or something missing, please submit an issue here to let me know and I can update the code.
 
+## Background Information
+
+- **Klipper Screen Interface**: The Klipper Screen interface code is primarily located at `/home/mks/KlipperScreen/`. This interface is used to manage and display information on the Sovol printers' screens.
+- **Programming Language**: The interface code for the Klipper Screen is written mostly in Python, which allows for easy modifications and enhancements.
+- **Timezone Configuration**: Originally, the Python code providing timezone options was limited. The enhancements in this repository expand these options by allowing a broader range of timezones to be set directly from the screen.
+- **Configuration File**: When a new timezone is selected, the Python code writes the selected timezone value to a file located at `/home/mks/target_timezone.txt`.
+- **Service Restart**: After updating the timezone configuration file, the Klipper screen service needs to be restarted for changes to take effect. This is done automatically by the python code via a system command that reboots the Klipper screen service.
+
 ## Prerequisites
 - SSH access to the Sovol SV06+ Klipper.
 - Ensure you have a backup of your original `zone.py` file (explained below).
