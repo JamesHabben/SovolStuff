@@ -14,6 +14,13 @@ If you find any issue with timezone names, offsets, values, or something missing
 - **Configuration File**: When a new timezone is selected, the Python code writes the selected timezone value to a file located at `/home/mks/target_timezone.txt`.
 - **Service Restart**: After updating the timezone configuration file, the Klipper screen service needs to be restarted for changes to take effect. This is done automatically by the python code via a system command that reboots the Klipper screen service.
 
+## Klipper Screen Images
+### Before Modification
+![IMG_5109](https://github.com/JamesHabben/SovolStuff/assets/6327329/d35fc35b-bec7-46d4-824c-53a81957ac77)
+
+### After Modification
+![IMG_5112](https://github.com/JamesHabben/SovolStuff/assets/6327329/67b82820-8919-44f6-b7c6-90ccb73fd9ef)
+
 ## Prerequisites
 - SSH access to the Sovol SV06+ Klipper.
 - Ensure you have a backup of your original `zone.py` file (explained below).
