@@ -1,10 +1,14 @@
 # Updating Timezone Information on Sovol SV06+ with Sovol Klipper Screen
 
-This guide provides instructions on how to update the timezone settings on your Sovol SV06+ 3D printer equipped with a Sovol Klipper screen. The original firmware had limited timezone options, and this update expands those options to include a broader range of timezones.
+This guide provides instructions on how to update the timezone settings on your Sovol SV06+ 3D printer equipped with a Sovol Klipper screen. The original code had limited timezone options, and this update expands those options to include a broader range of timezones.
+
+This will probably work on other Sovol models as well, but I only have an SV06+ to test with. If you update a different model, please submit an issue here to let me know and I can update this documentation.
+
+If you find any issue with timezone names, offsets, values, or something missing, please submit an issue here to let me know and I can update the code.
 
 ## Prerequisites
-- SSH access to the Sovol SV06+.
-- Ensure you have a backup of your original `zone.py` file.
+- SSH access to the Sovol SV06+ Klipper.
+- Ensure you have a backup of your original `zone.py` file (explained below).
 
 ## Instructions
 
@@ -25,9 +29,8 @@ This guide provides instructions on how to update the timezone settings on your 
    - Before making any changes, ensure that your `zone.py` file matches the my backed up version. You can get the hash of your current file:
      ```bash
      sha256sum zone.py
-     # Compare this output with the hash of your original backup.
      ```
-     My backup file hash: `ebf114783ca478465619a67b7d93b8ad03dd192311629606aaa0400b158b4ee0`
+     Compare with my backup file hash: `ebf114783ca478465619a67b7d93b8ad03dd192311629606aaa0400b158b4ee0`
 
 4. **Rename the existing `zone.py` to `zone.py.bak`**
    - It's important to keep a backup of the original configuration:
@@ -38,11 +41,15 @@ This guide provides instructions on how to update the timezone settings on your 
 5. **Download the updated `zone.py` from GitHub**
    - Pull the updated `zone.py` file from this GitHub repository:
      ```bash
-     wget [Your-GitHub-URL]/zone.py
+     wget https://github.com/JamesHabben/SovolStuff/raw/main/timezone/zone.py
      ```
 
-## Final Steps
-After downloading the new `zone.py`, restart any services or the printer itself to apply the changes. Verify that the new timezone settings are available and functioning as expected.
+6. **Restart the KlipperScreen service**
+   - After updating the `zone.py` file, you need to restart the KlipperScreen service to apply the changes. This might prompt you for the 'makerbase' password. Run the following command:
+     ```bash
+     sudo systemctl restart KlipperScreen
+     ```
+   - Verify that the new timezone settings are available and functioning as expected.
 
 ## Troubleshooting
 If you encounter issues, you can revert to the original settings by renaming `zone.py.bak` back to `zone.py` and restarting the printer.
