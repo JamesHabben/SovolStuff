@@ -10,6 +10,10 @@ As I encounter and resolve issues with Sovol printers, I document the solutions 
 
 The `timezone` folder contains scripts and documentation specifically for updating and managing timezone settings on Sovol printers equipped with a Klipper screen. This enhancement expands the original limited timezone options available on these devices, making it easier for users across different regions to manage their printer settings accurately. [Read more about the timezone mod here](timezone/readme.md).
 
+### Klipper Screen Package Version Analysis
+
+The `Sovol Code` folder includes a detailed analysis of the versions of various packages used in Sovol's Klipper screen setup. This analysis helps identify any custom modifications made specifically for Sovol printers and assesses the feasibility of updating or installing newer versions of each package without issues. [Read more about the package version analysis here](Sovol%20Code/readme.md).
+
 ### Future Additions
 
 As new issues are encountered and resolved, additional resources and folders will be added to this repository. These additions will assist other Sovol printer users in optimizing their devices and overcoming common challenges.
