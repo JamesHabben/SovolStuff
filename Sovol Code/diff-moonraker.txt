@@ -1,0 +1,11 @@
+diff -rq moonraker moonraker-c8767daddf6d5930841a8279767aaf20362c5eb0
+Only in moonraker: .git
+Only in moonraker/moonraker: __pycache__
+Only in moonraker/moonraker/components: __pycache__
+Only in moonraker/moonraker/components/file_manager: __pycache__
+Files moonraker/moonraker/components/file_manager/metadata.py and moonraker-c8767daddf6d5930841a8279767aaf20362c5eb0/moonraker/components/file_manager/metadata.py differ
+Only in moonraker/moonraker/components/update_manager: __pycache__
+Only in moonraker/moonraker/thirdparty: __pycache__
+Only in moonraker/moonraker/thirdparty/packagekit: __pycache__
+Only in moonraker/moonraker/utils: __pycache__
+Files moonraker/pyproject.toml and moonraker-c8767daddf6d5930841a8279767aaf20362c5eb0/pyproject.toml differ
