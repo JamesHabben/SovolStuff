@@ -32,7 +32,7 @@ The following table summarizes the current analysis of the package versions used
 - **Klipper**: The Sovol version of Klipper aligns with a commit several after the official 0.11.0 release, specifically commit `e6ef48c`. The diff analysis shows no significant custom modifications, indicating good compatibility with this version. One notable file is `klippy/extras: gcode_shell_command.py` that does not exist anywhere in the `klipper` repo, but does exist in the `kiauh` repo.
 - **Mainsail**: The Sovol version of Mainsail is a direct copy of the compiled release v2.6.0, with no modifications. This ensures full compatibility with the official release and simplifies updates.
 - **Fluidd**: The Sovol version of Fluidd is an exact copy of the release v1.23.2, ensuring full compatibility with the official release and simplifies updates.
-- **Kiauh**: The Sovol version of Kiauh is an exact copy of the code at commit `7989cec8d4e99cc31cac5e24753c8690f16bcde8`, ensuring that all functionalities are preserved as per the original repository.
+- **Kiauh**: The Sovol version of Kiauh is an exact copy of the code at commit `7989cec8d`, ensuring that all functionalities are preserved as per the original repository.
 - **Crowsnest**: The Sovol version includes specific configurations and additional binaries for RTSP streaming and ustreamer, which are not present in the source commit. These modifications may be critical for specific functionalities in Sovol's setup.
 
 ## Next Steps
