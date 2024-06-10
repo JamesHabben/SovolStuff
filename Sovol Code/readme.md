@@ -14,10 +14,10 @@ The following table summarizes the current analysis of the package versions used
 |---------------|---------------|----------------|-------------|------------|-------|
 | [Crowsnest](Crowsnest.md)     | Customized    | 20ed6a8b58     | 2023-04-15 | [Crowsnest 20ed6a8b58](https://github.com/mainsail-crew/crowsnest/tree/20ed6a8b585a92e8a0e7d8333e81b6e8ca7044e1) | Custom RTSP server setup and ustreamer binary. See `diff-crowsnest.txt` |
 | Fluidd        | Exact Match   | v1.23.2        | 2023-02-20  | [Fluidd v1.23.2](https://github.com/fluidd-core/fluidd/releases/tag/v1.23.2) | Direct copy of the release |
-| Kiauh         | Exact Match   | 7989cec8d | 2023-09-01 | [Kiauh 7989cec](https://github.com/dw-0/kiauh/tree/7989cec8d4e99cc31cac5e24753c8690f16bcde8) | Direct copy of the code at this commit |
-| Klipper       | Minor difference | Post-0.11.0   | 2023-02-13  | [Klipper e6ef48c](https://github.com/Klipper3d/klipper/tree/e6ef48cdf7b7e23f422cbe0ec46091001b840674) | See `diff-klipper.txt` |
+| [Kiauh](Kiauh.md)         | Exact Match   | 7989cec8d | 2023-09-01 | [Kiauh 7989cec](https://github.com/dw-0/kiauh/tree/7989cec8d4e99cc31cac5e24753c8690f16bcde8) | Direct copy of the code at this commit |
+| [Klipper](Klipper.md)       | Minor difference | Post-0.11.0   | 2023-02-13  | [Klipper e6ef48c](https://github.com/Klipper3d/klipper/tree/e6ef48cdf7b7e23f422cbe0ec46091001b840674) | See `diff-klipper.txt` |
 | [KlipperScreen](KlipperScreen.md) | TBD           | TBD            |   TBD          | TBD        | Looks to be somewhere around 2023-05-07   |
-| Mainsail      | Exact Match   | v2.6.0         | 2023-06-19  | [Mainsail v2.6.0](https://github.com/mainsail-crew/mainsail/releases/tag/v2.6.0) | Direct copy of the compiled release |
+| [Mainsail](Mainsail.md)      | Exact Match   | v2.6.0         | 2023-06-19  | [Mainsail v2.6.0](https://github.com/mainsail-crew/mainsail/releases/tag/v2.6.0) | Direct copy of the compiled release |
 | Moonraker     | Minor differences | c8767dadd     | 2023-02-27  | [Moonraker c8767dadd](https://github.com/Arksine/moonraker/tree/c8767daddf6d5930841a8279767aaf20362c5eb0) | See `diff-moonraker.txt` |
 
 ## Methodology
