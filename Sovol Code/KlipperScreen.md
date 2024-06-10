@@ -1,4 +1,4 @@
-KlipperScreen Code Analysis
+# KlipperScreen Code Analysis
 
 ## Code Notes
 ### ks_includes/locales/uk/LC_MESSAGES/KlipperScreen.po
