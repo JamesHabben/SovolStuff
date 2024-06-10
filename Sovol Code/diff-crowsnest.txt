@@ -1,0 +1,6 @@
+diff -rq crowsnest crowsnest-20ed6a8b585a92e8a0e7d8333e81b6e8ca7044e1
+Only in crowsnest: .git
+Only in crowsnest/bin/rtsp-simple-server: LICENSE
+Only in crowsnest/bin/rtsp-simple-server: rtsp-simple-server
+Only in crowsnest/bin/rtsp-simple-server: rtsp-simple-server.yml
+Only in crowsnest/bin: ustreamer
