@@ -1,6 +1,13 @@
 # KlipperScreen Code Analysis
 
-## Code Notes
+## Notes on Identifying Source Commit
+
+### panels/bed_level.py
+#### Line 18 (original repo)
+The `find_closest` (screw) function was added to original repo in 2023-03-01 commit.
+#### Line 52
+This comment line was broken into two lines in 2023-03-01 commit and remains as single line in Sovol code.
+
 ### ks_includes/locales/uk/LC_MESSAGES/KlipperScreen.po
 Lots of differences scattered through commits. Sovol code has timezone translations that still don't exist in original repo code (and likely won't since most KlipperScreen users won't use that interface to manage system level timezones).
 #### Key Lines
@@ -12,3 +19,43 @@ Lots of differences scattered through commits. Sovol code has timezone translati
 
 ##### Line 61
 - Sovol code doesn't have update from 2023-05-07 commit
+
+## Code Diff From 2023-03-01 Commit
+
+### Root Folder
+| Filename | Difference | Conflict | Description |
+| -------- | ---------- | -------- | ----------- |
+| screen.py | 52 diffs | Some Sovol function would be lost. | Added code for updates, timezones, wizard, config file. Modified code to fix screen in vertical. Removed code for multiple printers.
+
+### Panels Folder
+| Filename | Difference | Conflict | Description |
+| -------- | ---------- | -------- | ----------- |
+| base_panel.py | 7 diffs | Probably not | Added unnecessary code for config file, and a few lines for z movement. Moved some lines around but kept content the same. |
+| bed_level.py | 36 diffs | Probably not | Some code adjustments on homing checks, and simplification of screw finding |
+| bed_mesh.py | 2 diffs | no | Minimal change forcing a home action regardless of homed state |
+| camera.py | match | no | |
+| console.py | match | no | |
+| example.py | match | no | |
+| exclude.py | match | no | |
+| extrude.py | 3 diffs | no | Changed extrude length options and set temperature with changing extruder. |
+| fan.py | match | no | |
+| fine_tune.py | 3 diffs | no | Unnecessary change of array addressing |
+| gcode_macros.py | match | no | |
+|input_shaper.py | 3 diffs | no | Unnecessary commenting out a general homing instruction and forcing that home to be later. In fact, now it only homes if selecting a single axis shaper calibrate and skips if selecting both axis.|
+| job_status.py | 22 diffs | Probably not | Many changes to call a `save_last_file` function of some sort, but I haven't found that anywhere in the project as a macro or python function. |
+| led.py | only in Sovol | yes | Some code to interface with an extruder LED. SV06+ doesn't have an LED, maybe SV07? |
+| limits.py | 10 diffs | No | Code added to implement hard limits preventing user from exceeding intended limits |
+| main_menu.py | 3 diffs | no | Changed to set temp to -5 of max temp if max temp is exceeded rather than not setting any temp. |
+| menu.py | 7 diffs | yes-ish | Code diff seems to be arranging the menu buttons is a specific (different?) way so losing this would present a different screen. Not exactly 'breaking' anything, but a visual change is likely. |
+| move.py | 6 diffs | yes | Code adds buttons to be able to home z axis. |
+| network.py | 9 diffs | probably not | Adds in some specific eth0  and wlan0 interfaces, and some code to collect some additional info about the wifi ip info. |
+| pins.py | match | no | |
+| plr.py | only in Sovol | Probably not | Some code defining a few dialog boxes but not sure it is referenced by any other files. |
+| power.py | match | no | |
+| print.py | 5 diffs | no | Added a file listing reinit call that doesn't seem needed, and removed on-screen ability to rename files. |
+| printer_list.py | only in Sovol | No | Seems to be a new dialog to allow for multiple printers, but isn't referenced by any other files. |
+| printer_select.py | match | no | |
+| retraction.py | match | no | |
+| settings.py | 7 diffs | yes-ish | Added code to have timezone choice as a setting option. |
+| splash_screen.py | match | no | |
+| system.py | tons | Probably not | Lots of changes here that seem to be an attempt to handle on-screen updating of packages, but tons of it is commented out so not functioning. |
