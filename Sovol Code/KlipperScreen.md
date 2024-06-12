@@ -50,7 +50,7 @@ Lots of differences scattered through commits. Sovol code has timezone translati
 | move.py | 6 diffs | yes | Code adds buttons to be able to home z axis. |
 | network.py | 9 diffs | probably not | Adds in some specific eth0  and wlan0 interfaces, and some code to collect some additional info about the wifi ip info. |
 | pins.py | match | no | |
-| plr.py | only in Sovol | Probably not | Some code defining a few dialog boxes but not sure it is referenced by any other files. |
+| plr.py | only in Sovol | Probably not | Small dialog box for resuming a print as part of a power loss recovery feature. |
 | power.py | match | no | |
 | print.py | 5 diffs | no | Added a file listing reinit call that doesn't seem needed, and removed on-screen ability to rename files. |
 | printer_list.py | only in Sovol | No | Seems to be a new dialog to allow for multiple printers, but isn't referenced by any other files. |
@@ -59,3 +59,8 @@ Lots of differences scattered through commits. Sovol code has timezone translati
 | settings.py | 7 diffs | yes-ish | Added code to have timezone choice as a setting option. |
 | splash_screen.py | match | no | |
 | system.py | tons | Probably not | Lots of changes here that seem to be an attempt to handle on-screen updating of packages, but tons of it is commented out so not functioning. |
+| temperature.py | 8 diffs | no | Added a block of code thats a duplicate function with different name, only adding part cooling fan speed. Modified code to set the effective max temperature to -5 of whatever the config value is. |
+| update_state_warn.py | only in Sovol | yes | looks to be a progress screen for updating firmware of the screen |
+| wizard.py | only in Sovol | probably not | GUI wizard walk through of timezone, language, network setup. |
+| zcalibrate.py | 4 diffs | no | Added a `start_calibration_flag` to prevent starting a calibration while one is already in progress. |
+| zone.py | only in Sovol | kinda | Code to handle setting of timezones for the system. |
